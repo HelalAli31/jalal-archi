@@ -81,44 +81,46 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background" dir="rtl">
       {/* Hero Section */}
-      <section 
-        className="relative min-h-screen flex items-center justify-center parallax"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-luxury-dark/60 via-luxury-dark/50 to-luxury-dark/70" />
-        
-        <div className="relative z-10 container mx-auto px-6 text-center">
-          <div className="fade-in">
-          <img 
-  src={logo} 
-  alt="לוגו גלאל עלי אדריכלות" 
-  className="w-40 md:w-64 h-auto mx-auto mb-8 drop-shadow-2xl rounded-3xl mt-3"
-/>
+    <section 
+  className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
+  style={{ backgroundImage: `url(${heroBg})` }}
+>
+  {/* Dark overlay */}
+  <div className="absolute inset-0 bg-gradient-to-b from-luxury-dark/60 via-luxury-dark/50 to-luxury-dark/70" />
+
+  <div className="relative z-10 container mx-auto px-6 text-center">
+    <div className="fade-in">
+      
+      <img 
+        src={logo} 
+        alt="לוגו גלאל עלי אדריכלות" 
+        className="w-40 md:w-64 h-auto mx-auto mb-8 drop-shadow-2xl rounded-3xl mt-3"
+      />
 
       <div className="bg-[rgba(99,60,40,0.6)] backdrop-blur-sm rounded-3xl p-10 max-w-2xl mx-auto">
-  <h1 className="text-5xl md:text-7xl font-bold text-luxury-cream mb-6 tracking-tight">
-    אדריכלות ועיצוב פנים <br />
-    <span className="text-amber-400">גלאל עלי</span>
-  </h1>
+        <h1 className="text-4xl md:text-7xl font-bold text-luxury-cream mb-6 tracking-tight">
+          אדריכלות ועיצוב פנים <br />
+          <span className="text-amber-400">גלאל עלי</span>
+        </h1>
 
-  <p className="text-xl md:text-2xl text-luxury-beige mb-12 leading-relaxed">
-    יוצרים חללים נצחיים שבהם אלגנטיות פוגשת חדשנות
-  </p>
+        <p className="text-lg md:text-2xl text-luxury-beige mb-12 leading-relaxed">
+          יוצרים חללים נצחיים שבהם אלגנטיות פוגשת חדשנות
+        </p>
 
-  <Button 
-    size="lg" 
-    onClick={() => window.open(whatsappUrl, '_blank')}
-    className="bg-accent hover:bg-luxury-gold-light text-primary font-semibold text-lg px-10 py-6 rounded-full shadow-2xl hover:shadow-[0_20px_60px_-10px_hsl(var(--luxury-gold)/0.5)] transition-all duration-500 hover:scale-105"
-  >
-    <MessageCircle className="ml-2 h-5 w-5" />
-    יעוץ בווטסאפ
-  </Button>
-</div>
+        <Button 
+          size="lg" 
+          onClick={() => window.open(whatsappUrl, '_blank')}
+          className="bg-accent hover:bg-luxury-gold-light text-primary font-semibold text-lg px-10 py-6 rounded-full shadow-2xl hover:shadow-[0_20px_60px_-10px_hsl(var(--luxury-gold)/0.5)] transition-all duration-500 hover:scale-105"
+        >
+          <MessageCircle className="ml-2 h-5 w-5" />
+          יעוץ בווטסאפ
+        </Button>
+      </div>
 
+    </div>
+  </div>
+</section>
 
-          </div>
-        </div>
-      </section>
 
       {/* About Section */}
       <section className="py-24 bg-background">
